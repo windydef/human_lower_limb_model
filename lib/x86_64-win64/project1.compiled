@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Compiler Value="C:\codetyphon\fpc\fpc64\bin\x86_64-win64\fpc.exe" Date="1280735992"/>
+  <Params Value=" -MObjFPC -Scghi -O1 -g -gl -WG -l -vewnhibq &quot;-FiD:\ITS\SEM 5\BIOMODELLING\TUGAS 6 FINAL PROJECT 3 JOINTS PASSIVE\lib\x86_64-win64&quot; -FuC:\codetyphon\typhon\components\lz_taChart\lib\x86_64-win64\win32 -FuC:\codetyphon\typhon\components\BaseIdeintf\units\x86_64-win64\win32 -FuC:\codetyphon\typhon\components\BaseControls\lib\x86_64-win64\win32 -FuC:\codetyphon\typhon\lcl\units\x86_64-win64\win32 -FuC:\codetyphon\typhon\lcl\units\x86_64-win64 -FuC:\codetyphon\typhon\components\BaseUtils\lib\x86_64-win64 -FuC:\codetyphon\typhon\packager\units\x86_64-win64 &quot;-FuD:\ITS\SEM 5\BIOMODELLING\TUGAS 6 FINAL PROJECT 3 JOINTS PASSIVE\&quot; &quot;-FUD:\ITS\SEM 5\BIOMODELLING\TUGAS 6 FINAL PROJECT 3 JOINTS PASSIVE\lib\x86_64-win64\&quot; -dLCL -dLCLwin32 project1.ppr"/>
+</CONFIG>
