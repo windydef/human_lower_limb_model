@@ -75,19 +75,6 @@ RK4 step size h = 0.001. The limb is released from an initial posture and settle
 
 ---
 
-### Notes on the source document (important — read before reusing the equations)
-
-This report's prose, structure, and parameter tables are reproduced faithfully above. The **equations in the source contain multiple errors** — some OCR/transcription artifacts, some substantive. The README deliberately does not reproduce the full Lagrangian derivation, because doing so would propagate these errors. Flags:
-
-- **RK4 formulas are incorrect as printed.** The source uses `kᵢ = (h/2)·f(...)` for every stage and divides the update by 3. Standard RK4 is `k₁ = h·f(...)`, `k₂ = h·f(x+h/2, y+k₁/2)`, etc., with update `y_{n+1} = y_n + (k₁+2k₂+2k₃+k₄)/6`. The printed scheme is not standard RK4 and would not give 4th-order accuracy. [High confidence — standard numerical methods.]
-- **State-space inversion is wrong.** From `Mθ̈ + Cθ̇ + G = τ`, the correct form is `θ̈ = M⁻¹(τ − Cθ̇ − G)`. The source writes `θ̈ = M⁻¹[−M⁻¹θ̇ − M⁻¹G]` (drops τ, double-applies M⁻¹, replaces C with a second M⁻¹). A later line (eq. 10) writes it yet another inconsistent way using multiplication signs. [High confidence.]
-- **C-matrix multiplies the wrong vector** in one of the two matrix-equation renders (shown against `θ̈` instead of `θ̇`).
-- **Sign/index inconsistencies** recur through the derivation: `cos(θ₁+θ₂)` vs `cos(θ₁−θ₂)` flips between the velocity, Lagrangian, and M-matrix lines; a kinetic-energy expansion collapses m₂/m₃ terms into m₁; potential-energy heights show `L₁+L₁+L₃` where `L₁+L₂+L₃` is intended.
-- **Conclusion vs. data conflict.** The conclusion states initial angle makes "no significant difference" to iterations, but the standing-position results (1236 / 1263 / 1061 / 1056) vary by ~17% and do track the initial configuration. The better-supported claim is the report's other one: steady state is governed by the hip angle. [Medium confidence — from the four data points shown.]
-- **Recommendation:** treat the parameter tables (3.1, 3.2a, 3.2b) and the experiment results as the reliable, citable content. If you need the actual equations of motion, re-derive the M, C, G matrices from a trusted reference (e.g. a standard 3-link planar manipulator / triple-pendulum Lagrangian) rather than transcribing them from this report.
-
----
-
 ## Author
 
 **Windy Deftia M**  
